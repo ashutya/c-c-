@@ -1,39 +1,37 @@
-//calculator in c 
 #include<stdio.h>
-int main()
-{
+void main()
+{   
+    float a,b;
+    int mul,div,sub,sum,count;
     char c;
-    int a,b,sum,sub,mul,div,per;
-    printf("enter the value of a and b");
-    scanf("%d%d",&a,&b);
-    printf("select operator whic you want to perform + - * / % ");
-    fflush(stdin);
-    scanf("%c",&c);
-     if(c=='+')
-     {
-    sum=a+b;
-    printf("addition is %d",sum);
-     }
-      else if(c=='-')
-     {
-    sub=a-b;
-    printf("sub=%i",sub);
-     }
-     else if(c=='*')
-     {
-        mul=a*b;
-        printf("mul=%d",mul);
-     }
-     else if(c=='/')
-     {
-     div=a/b;
-     printf(" div=%d ",div);
-     }
-     else if(c=='%')
-     {
-        per=a%b;
-        printf("per=%d",per);
-     }
-     else
-     printf("invalid input");
-}
+    do
+    {
+        printf("enter two number");
+        scanf("%f%f",&a,&b);
+        fflush(stdin);
+        printf("enter the operator which you want to perform + - * / %  ");
+        scanf("%c",&c);
+        switch(c)
+        {
+            case '+':
+            printf("sum=%f",a+b);
+            break;
+            case '-':
+            printf("sub=%f",a-b);
+            break;
+            case '*':
+            printf("mul=%f",a*b);
+            break;
+            case '/':
+            printf("div=%f",a/b);
+            break;
+            default:
+            printf("invalid choice");
+        }
+        printf("ASHU TYAGI ");
+        printf("\n do you want to continue");
+        scanf("%d",&count);
+    
+    }  
+    while(count==1);
+} 
