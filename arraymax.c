@@ -1,5 +1,5 @@
 #include<stdio.h>
-void max(int a[]);
+int max(int a[]);
 void main()
 {
     int a[10],i;
@@ -9,8 +9,9 @@ void main()
         scanf("%d",&a[i]);
     }
    max(a);
+   printf("max=%d",max(a));
 }
-void max(int a[])
+int max(int a[])
 {
     int max=a[0],i;
 for(i=1;i<10;i++)
@@ -18,5 +19,5 @@ for(i=1;i<10;i++)
     if(max<a[i])
     max=a[i];
 }
-printf("max=%d",max);
+return max;
 }
